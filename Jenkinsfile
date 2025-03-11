@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh './build_output'
+                    sh 'cd main && chmod +x build_output && ./build_output'
                 }
             }
         }
@@ -31,4 +31,3 @@ pipeline {
         }
     }
 }
-
